@@ -8,6 +8,9 @@ import { HeaderComponent } from './shared/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { UsuarioService } from './services/usuario.service';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +23,10 @@ import { FooterComponent } from './shared/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
