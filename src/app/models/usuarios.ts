@@ -8,6 +8,10 @@ export class Usuarios{
   pais: string;
   ciudad: string;
   acercaDeMi: string;
+  email: string;
+  grado: string;
+  ocupacion: string;
+  descripcionDelIndibiduo: string;
 
   constructor(){
     this.id = 0;
@@ -18,5 +22,10 @@ export class Usuarios{
     this.pais = '';
     this.ciudad = '';
     this.acercaDeMi = '';
+    this.email = '';
+    this.grado = '';
+    this.ocupacion = '';
+
+    this.descripcionDelIndibiduo = '';
   }
 }

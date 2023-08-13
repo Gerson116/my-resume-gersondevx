@@ -1,0 +1,4 @@
+.descripcionDelIndibiduo::after {
+  content: ".\A";
+  white-space: pre;
+}

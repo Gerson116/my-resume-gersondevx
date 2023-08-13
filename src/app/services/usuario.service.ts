@@ -65,4 +65,51 @@ export class UsuarioService {
     }
     return this.resp;
   }
+
+  async buscarExperienciasLaborales(){
+    try {
+      let { data, error } = await this.supabase
+      .from('Educacion')
+      .select('*')
+      this.resp.success = true;
+      this.resp.data = data;
+    } catch (e) {
+      this.resp.success = false;
+      this.resp.error = e;
+      console.log(`Error en la consulta: ${e}`);
+    }
+    return this.resp;
+  }
+
+  async buscarLasHabilidadesTecnicas(){
+    try {
+      let { data, error } = await this.supabase
+      .from('Habilidades')
+      .select('*')
+      .order("habilidad")
+      this.resp.success = true;
+      this.resp.data = data;
+    } catch (e) {
+      this.resp.success = false;
+      this.resp.error = e;
+      console.log(`Error en la consulta: ${e}`);
+    }
+    return this.resp;
+  }
+
+  async buscarLasExperiencias(){
+    try {
+      let { data, error } = await this.supabase
+      .from('ExperienciaProfesional')
+      .select('*')
+      .order("id")
+      this.resp.success = true;
+      this.resp.data = data;
+    } catch (e) {
+      this.resp.success = false;
+      this.resp.error = e;
+      console.log(`Error en la consulta: ${e}`);
+    }
+    return this.resp;
+  }
 }
