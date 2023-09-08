@@ -1,0 +1,42 @@
+# Ignorar archivos y directorios generados por el sistema
+node_modules
+dist
+.tmp
+tmp
+log
+logs
+
+# Ignorar archivos de configuración
+*.dockerignore
+Dockerfile
+
+# Ignorar archivos de respaldo
+*~
+
+# Ignorar archivos y directorios de desarrollo local
+.editorconfig
+.eslint*
+.git*
+.husky
+.prettier*
+.npmrc
+.vscode
+
+# Ignorar archivos de pruebas y configuración de pruebas
+karma.conf.js
+protractor.conf.js
+
+# Ignorar archivos de documentación
+*.md
+
+# Ignorar archivos de configuración de paquetes
+package-lock.json
+yarn.lock
+
+# Ignorar archivos de entorno
+.env*
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
